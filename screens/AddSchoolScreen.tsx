@@ -116,7 +116,6 @@ export default function AddSchoolScreen() {
 
     return (
         <View style={styles.container}>
-            {/* Header with back button */}
             <View style={styles.headerContainer}>
                 <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
                     <Ionicons name="arrow-back" size={24} color="#D27C5C" />
@@ -125,7 +124,6 @@ export default function AddSchoolScreen() {
             </View>
 
             <ScrollView contentContainerStyle={styles.scrollContainer}>
-                {/* School Name */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>School Name</Text>
                     <TextInput
@@ -137,7 +135,6 @@ export default function AddSchoolScreen() {
                     />
                 </View>
 
-                {/* Website */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Website</Text>
                     <TextInput
@@ -151,7 +148,6 @@ export default function AddSchoolScreen() {
                     />
                 </View>
 
-                {/* Phone Number */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Phone Number</Text>
                     <TextInput
@@ -164,7 +160,6 @@ export default function AddSchoolScreen() {
                     />
                 </View>
 
-                {/* Location */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Location</Text>
                     <TouchableOpacity style={styles.locationRow} onPress={fetchLocation}>
@@ -179,7 +174,6 @@ export default function AddSchoolScreen() {
                     </TouchableOpacity>
                 </View>
 
-                {/* Manual map pick */}
                 <TouchableOpacity
                     style={styles.manualBtn}
                     onPress={() => setManualSelect((v) => !v)}
@@ -202,7 +196,6 @@ export default function AddSchoolScreen() {
                     </MapView>
                 )}
 
-                {/* Category */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Category</Text>
                     <View style={styles.pickerWrapper}>
@@ -219,7 +212,6 @@ export default function AddSchoolScreen() {
                     </View>
                 </View>
 
-                {/* Photo */}
                 <View style={styles.inputContainer}>
                     <Text style={styles.label}>Upload Photo</Text>
                     <TouchableOpacity style={styles.photoBox} onPress={pickPhoto}>
@@ -234,7 +226,6 @@ export default function AddSchoolScreen() {
                     </TouchableOpacity>
                 </View>
 
-                {/* Submit Button */}
                 <TouchableOpacity style={styles.submitBtn} onPress={onSubmit}>
                     <Text style={styles.submitText}>Add School</Text>
                 </TouchableOpacity>

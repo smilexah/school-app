@@ -108,15 +108,14 @@ export default function MapScreen() {
                 style={styles.map}
                 region={region}
                 onRegionChangeComplete={setRegion}
-                showsUserLocation={false} // We'll implement our own for more control
-                showsMyLocationButton={false} // Disable default button
+                showsUserLocation={false}
+                showsMyLocationButton={false}
             >
                 <UrlTile
                     urlTemplate="https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     maximumZ={19}
                 />
 
-                {/* User location accuracy circle */}
                 {userLocation && (
                     <Circle
                         center={{
@@ -130,7 +129,6 @@ export default function MapScreen() {
                     />
                 )}
 
-                {/* User location marker */}
                 {userLocation && (
                     <Marker
                         coordinate={{
@@ -155,7 +153,6 @@ export default function MapScreen() {
                 ))}
             </MapView>
 
-            {/* Search + Filter панель */}
             <View style={styles.searchBar}>
                 <Ionicons name="search" size={20} color="#888"/>
                 <TextInput
@@ -173,7 +170,6 @@ export default function MapScreen() {
                 </TouchableOpacity>
             </View>
 
-            {/* Location button */}
             <TouchableOpacity
                 style={styles.locationButton}
                 onPress={getCurrentLocation}
@@ -181,7 +177,6 @@ export default function MapScreen() {
                 <Ionicons name="locate" size={24} color="#D27C5C"/>
             </TouchableOpacity>
 
-            {/* FAB «+» */}
             <TouchableOpacity
                 style={styles.fab}
                 onPress={() => nav.navigate('AddSchool')}

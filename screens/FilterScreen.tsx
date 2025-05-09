@@ -30,7 +30,6 @@ export default function FilterScreen() {
 
     return (
         <SafeAreaView style={styles.container}>
-            {/* Header */}
             <View style={styles.header}>
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
@@ -39,11 +38,10 @@ export default function FilterScreen() {
                     <Ionicons name="arrow-back" size={24} color="#D27C5C"/>
                 </TouchableOpacity>
                 <Text style={styles.title}>Filter Schools</Text>
-                <View style={{width: 24}}/> {/* Spacer for balance */}
+                <View style={{width: 24}}/>
             </View>
 
             <View style={styles.content}>
-                {/* Filter Icon */}
                 <View style={styles.iconContainer}>
                     <Ionicons
                         name="funnel"
@@ -56,7 +54,6 @@ export default function FilterScreen() {
                     Choose type of school:
                 </Text>
 
-                {/* Category Chips */}
                 <ScrollView
                     contentContainerStyle={styles.chipsContainer}
                     showsVerticalScrollIndicator={false}
@@ -91,7 +88,6 @@ export default function FilterScreen() {
                     ))}
                 </ScrollView>
 
-                {/* Action Buttons */}
                 <View style={styles.btnContainer}>
                     <TouchableOpacity
                         style={styles.clearBtn}

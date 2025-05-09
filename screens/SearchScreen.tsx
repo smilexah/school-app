@@ -21,7 +21,6 @@ export default function SearchScreen() {
                     <Ionicons name="filter" size={24} color="#888"/>
                 </TouchableOpacity>
             </View>
-            {/* Здесь позже можно отрисовать текст «Results for …» или список */}
         </View>
     )
 }

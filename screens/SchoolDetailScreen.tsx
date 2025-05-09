@@ -42,7 +42,6 @@ export default function SchoolDetailScreen({ route }: any) {
 
     return (
         <View style={styles.container}>
-            {/* Header with back button and school image */}
             <View style={styles.header}>
                 <Image
                     source={photoUri ? { uri: photoUri } : require('../assets/default-school.png')}
@@ -58,7 +57,6 @@ export default function SchoolDetailScreen({ route }: any) {
             </View>
 
             <ScrollView contentContainerStyle={styles.contentContainer}>
-                {/* School Name and Category */}
                 <View style={styles.titleContainer}>
                     <Text style={styles.schoolName}>{name}</Text>
                     <View style={styles.categoryContainer}>
@@ -66,14 +64,11 @@ export default function SchoolDetailScreen({ route }: any) {
                     </View>
                 </View>
 
-                {/* Divider */}
                 <View style={styles.divider} />
 
-                {/* Information Sections */}
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Contact Information</Text>
 
-                    {/* Address */}
                     <View style={styles.infoBox}>
                         <View style={styles.iconContainer}>
                             <Ionicons name="location-sharp" size={20} color="#fff" />
@@ -84,7 +79,6 @@ export default function SchoolDetailScreen({ route }: any) {
                         </View>
                     </View>
 
-                    {/* Phone */}
                     <View style={styles.infoBox}>
                         <View style={styles.iconContainer}>
                             <Ionicons name="call" size={20} color="#fff" />
@@ -101,7 +95,6 @@ export default function SchoolDetailScreen({ route }: any) {
                         </View>
                     </View>
 
-                    {/* Website */}
                     <View style={styles.infoBox}>
                         <View style={styles.iconContainer}>
                             <Ionicons name="link" size={20} color="#fff" />
@@ -174,7 +167,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     categoryContainer: {
-        backgroundColor: '#F8E8E0', // Light orange background
+        backgroundColor: '#F8E8E0',
         paddingHorizontal: 12,
         paddingVertical: 6,
         borderRadius: 20,
@@ -182,7 +175,7 @@ const styles = StyleSheet.create({
     },
     category: {
         fontSize: 14,
-        color: '#D27C5C', // Orange text
+        color: '#D27C5C',
         fontWeight: '600',
     },
     divider: {
@@ -205,7 +198,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     iconContainer: {
-        backgroundColor: '#D27C5C', // Orange background
+        backgroundColor: '#D27C5C',
         width: 36,
         height: 36,
         borderRadius: 18,
@@ -226,7 +219,7 @@ const styles = StyleSheet.create({
         color: '#34495e',
     },
     linkText: {
-        color: '#D27C5C', // Orange links
+        color: '#D27C5C',
         textDecorationLine: 'underline',
     },
 });
