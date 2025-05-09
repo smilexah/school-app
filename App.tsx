@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useEffect} from 'react'
+import {NavigationContainer} from '@react-navigation/native'
+import * as SplashScreen from 'expo-splash-screen'
+import {SchoolsProvider} from "./context/SchoolsContext";
+import RootNavigator from "./navigation";
+import {FilterProvider} from "./context/FilterContext";
+
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    useEffect(() => {
+        SplashScreen.hideAsync();
+    }, []);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    return (
+        <SchoolsProvider>
+            <FilterProvider>
+                <NavigationContainer>
+                    <RootNavigator/>
+                </NavigationContainer>
+            </FilterProvider>
+        </SchoolsProvider>
+    )
+}
